@@ -4,18 +4,18 @@ import Nav from './Nav.js'
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import React from 'react';
 import './App.css';
+import { useHistory } from 'react-router-dom'
 
-class App extends React.Component {
-
-  render() {
+const App = () => {
     return (
-      <div className="App">
-          <Nav />
-          <Shop />
-          <About /> 
-      </div>
-    );
-  }
+        <Router>
+        <Nav />
+            <Route path="/about" component={About}/>
+            <Route path="/shop" component={Shop} />
+        </Router>
+    )
+
+
 }
 
 export default App;

@@ -1,13 +1,19 @@
-// import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 const Nav = () => {
     return (
-       <nav>
-           <ul>
-               <li>About</li>
-               <li>Shop</li>
-           </ul>
-       </nav>
+        // <Router>
+            <nav>
+                <ul>
+                    <Link to="/about">
+                            <h2>About</h2>
+                    </Link>
+                    <Link to="/shop">
+                            <h2>Shop</h2>
+                    </Link>
+                </ul>
+            </nav>
+        // </Router>
     )
 }
 
